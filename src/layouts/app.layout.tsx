@@ -20,7 +20,7 @@ export const AppLayout: React.FC<Props> = (props) => {
       <AppBar position="static">
         <Toolbar variant="dense">
           <Link to={linkRoutes.characterCollection} style={{ textDecoration: 'none', color: 'inherit' }}>
-            <Typography variant="h6">Character App - Base</Typography>
+            <Typography variant="h6">Character App - Opcional</Typography>
           </Link>
         </Toolbar>
       </AppBar>
