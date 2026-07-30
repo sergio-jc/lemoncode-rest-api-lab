@@ -4,6 +4,9 @@ import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import * as classes from './app.layout.styles';
+import Typography from '@mui/material/Typography';
+import { Link } from 'react-router-dom';
+import { linkRoutes } from '#core/router/routes.js';
 
 interface Props {
   children: React.ReactNode;
@@ -16,9 +19,9 @@ export const AppLayout: React.FC<Props> = (props) => {
     <>
       <AppBar position="static">
         <Toolbar variant="dense">
-          <IconButton color="inherit" aria-label="Menu">
-            <AccountCircle />
-          </IconButton>
+          <Link to={linkRoutes.characterCollection} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Typography variant="h6">Character App - Base</Typography>
+          </Link>
         </Toolbar>
       </AppBar>
       <main className={classes.content}>{children}</main>
