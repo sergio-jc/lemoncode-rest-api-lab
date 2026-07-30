@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import { formValidation } from './character.validations';
 import { CharacterEntityVm } from './character.vm';
 import * as classes from './character.styles';
+import { TextFieldComponent } from '#common/components';
+import { Button } from '@mui/material';
 
 interface Props {
   character: CharacterEntityVm;
@@ -57,7 +59,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
                   color={getStatusColor(character.status)}
                 />
               </div>
-              {/* <TextFieldComponent
+              <TextFieldComponent
                 name="bestSentence"
                 label="Best sentence"
                 multiline={true}
@@ -65,7 +67,7 @@ export const CharacterComponent: React.FunctionComponent<Props> = (props) => {
               />
               <Button type="submit" variant="contained" color="primary">
                 Save
-              </Button> */}
+              </Button>
             </div>
           </div>
         </Form>
